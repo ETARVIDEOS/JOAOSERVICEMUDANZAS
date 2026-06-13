@@ -178,7 +178,7 @@
       "factor": 1.5
     }
   ],
-  "Dormitorio N� 1": [
+  "Dormitorio N° 1": [
     {
       "name": "cama 2 plazas king dormitorio n° 1",
       "label": "Cama 2 Plazas King",
@@ -240,7 +240,7 @@
       "factor": 0.25
     }
   ],
-  "Dormitorio N� 2": [
+  "Dormitorio N° 2": [
     {
       "name": "cama 1 plaza dormitorio nº 2",
       "label": "Cama 1 Plaza",
@@ -272,7 +272,7 @@
       "factor": 0.3
     }
   ],
-  "Dormitorio N� 3": [
+  "Dormitorio N° 3": [
     {
       "name": "cama 1 plaza dormitorio nº 3",
       "label": "Cama 1 Plaza",
@@ -306,17 +306,17 @@
   ],
   "Cocina": [
     {
-      "name": "refrigerador 6&#039; cocina",
+      "name": "refrigerador 6 cocina",
       "label": "Refrigerador 6'",
       "factor": 1.0
     },
     {
-      "name": "refrigerador 10&#039; cocina",
+      "name": "refrigerador 10 cocina",
       "label": "Refrigerador 10'",
       "factor": 1.4
     },
     {
-      "name": "refrigerador 15&#039; cocina",
+      "name": "refrigerador 15 cocina",
       "label": "Refrigerador 15'",
       "factor": 1.7
     },
@@ -428,7 +428,7 @@
       "factor": 0.05
     },
     {
-      "name": "videos/dvd&#039;s x cajas varios",
+      "name": "videos/dvds x cajas varios",
       "label": "Videos/Dvd's x Cajas",
       "factor": 0.1
     },
