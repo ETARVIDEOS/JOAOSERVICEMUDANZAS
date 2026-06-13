@@ -1,0 +1,405 @@
+===============================================================
+  GUÍA: OPTIMIZACIÓN PARA LLMs / IA EN SITIOS WEB ESTÁTICOS
+  Procedimiento reutilizable — Boyé Ingeniería
+===============================================================
+
+¿QUÉ ES LLM SEO?
+-----------------
+Los motores de IA (ChatGPT, Claude, Perplexity, Gemini, Copilot)
+están siendo usados cada vez más como buscadores. Si un negocio
+no está visible para estos modelos, pierde oportunidades de que
+la IA lo recomiende a potenciales clientes.
+
+Este procedimiento se hace UNA VEZ por sitio y tarda ~30 minutos.
+
+
+===============================================================
+PASO 1 — robots.txt (permitir crawlers de IA)
+===============================================================
+
+Crear o editar el archivo robots.txt en la raíz del sitio.
+Agregar los siguientes agentes si no están ya:
+
+-------- COPIAR ESTO EN robots.txt --------
+
+User-agent: *
+Allow: /
+
+# Buscadores tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# LLM / IA Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://TUDOMINIO.cl/sitemap.xml
+
+-------------------------------------------
+
+NOTA: Reemplazar TUDOMINIO.cl con el dominio real.
+
+
+===============================================================
+PASO 2 — llms.txt (el "currículum" del sitio para IAs)
+===============================================================
+
+Crear el archivo llms.txt en la raíz del sitio.
+Es un archivo Markdown simple que los LLMs leen para entender
+de qué trata el negocio sin tener que procesar todo el HTML.
+
+Estructura recomendada:
+
+-------- PLANTILLA llms.txt --------
+
+# [Nombre del negocio]
+
+> [Una línea que resume qué es la empresa y dónde está]
+
+## Descripción
+
+[2-3 párrafos explicando qué hace la empresa, su historia,
+valores y propuesta de valor. Escribir en lenguaje natural,
+como si le explicaras a alguien qué hace la empresa.]
+
+## Servicios
+
+- **[Servicio 1]**: [Descripción breve]
+- **[Servicio 2]**: [Descripción breve]
+- **[Servicio 3]**: [Descripción breve]
+(agregar todos los servicios/productos)
+
+## Cobertura geográfica (si aplica)
+
+- [País, región, ciudad]
+- Comunas/zonas atendidas: [lista]
+- Zonas NO atendidas: [lista si aplica]
+
+## Contacto
+
+- **WhatsApp**: +56 9 XXXX XXXX — https://wa.me/56XXXXXXXXX
+- **Teléfono**: +56 9 XXXX XXXX
+- **Email**: contacto@dominio.cl
+- **Horario**: [horario de atención]
+- **Dirección**: [si aplica]
+
+## Sitio web
+
+- https://TUDOMINIO.cl
+- https://TUDOMINIO.cl/#servicios
+- https://TUDOMINIO.cl/#contacto
+(agregar secciones principales)
+
+-------- FIN PLANTILLA --------
+
+IMPORTANTE:
+- El archivo debe estar disponible en https://TUDOMINIO.cl/llms.txt
+- Usar lenguaje natural, sin jerga técnica
+- Ser específico con ubicaciones, nombres y servicios
+- Actualizar cuando cambien los servicios o contacto
+
+
+===============================================================
+PASO 3 — Schema.org JSON-LD (datos estructurados para IAs)
+===============================================================
+
+En el <head> del HTML principal, agregar o mejorar el bloque
+<script type="application/ld+json"> con la siguiente estructura.
+Esto le dice a Google, Bing y LLMs exactamente qué tipo de
+negocio es y cómo contactarlo.
+
+-------- PLANTILLA JSON-LD --------
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nombre del Negocio",
+  "description": "Descripción completa del negocio en 1-2 frases.",
+  "url": "https://TUDOMINIO.cl",
+  "telephone": "+56XXXXXXXXX",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+56XXXXXXXXX",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish",
+      "description": "WhatsApp"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+56XXXXXXXXX",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish",
+      "description": "Llamados"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad",
+    "addressRegion": "Región",
+    "addressCountry": "CL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -XX.XXXX,
+    "longitude": -XX.XXXX
+  },
+  "openingHours": "Mo-Sa",
+  "areaServed": ["Ciudad1", "Ciudad2", "Ciudad3"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicio 1" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicio 2" } }
+    ]
+  },
+  "foundingDate": "YYYY",
+  "slogan": "El slogan del negocio",
+  "email": "contacto@dominio.cl"
+}
+</script>
+
+-------- FIN PLANTILLA --------
+
+Tipos @type comunes según el negocio:
+- LocalBusiness       → negocio genérico local
+- Restaurant          → restaurante
+- MedicalBusiness     → clínica, médico
+- AutoRepair          → taller mecánico
+- HomeAndConstructionBusiness → construcción, remodelación
+- ProfessionalService → abogados, contadores
+- Store               → tienda física
+- LandscapingBusiness → paisajismo, jardinería
+
+Ver todos en: https://schema.org/LocalBusiness
+
+
+===============================================================
+PASO 4 — Meta tags para IA en el <head>
+===============================================================
+
+Agregar estas dos líneas en el <head> del HTML,
+junto a las otras etiquetas meta:
+
+<meta name="description-ai" content="[Descripción detallada
+para IAs: nombre empresa, ubicación, servicios específicos,
+teléfono de contacto. Más detallada que la meta description normal.]">
+
+<link rel="llms" type="text/plain" href="https://TUDOMINIO.cl/llms.txt">
+
+NOTA: description-ai puede repetir información de description
+pero siendo más explícita y detallada (hasta 300 caracteres).
+
+
+===============================================================
+PASO 5 — sitemap.xml (actualizar y agregar llms.txt)
+===============================================================
+
+Actualizar el sitemap.xml:
+1. Cambiar las fechas <lastmod> a la fecha actual (YYYY-MM-DD)
+2. Agregar una entrada para llms.txt:
+
+<url>
+  <loc>https://TUDOMINIO.cl/llms.txt</loc>
+  <lastmod>YYYY-MM-DD</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+
+===============================================================
+PASO 6 — Verificación técnica (archivos accesibles)
+===============================================================
+
+Después de hacer el deploy, abrir en el navegador:
+
+[ ] https://TUDOMINIO.cl/robots.txt  → debe mostrar el archivo
+[ ] https://TUDOMINIO.cl/llms.txt    → debe mostrar el archivo
+[ ] https://TUDOMINIO.cl/sitemap.xml → debe mostrar el sitemap
+
+Validar Schema JSON-LD (sin errores de estructura):
+→ https://search.google.com/test/rich-results
+  (pegar la URL del sitio y revisar que no haya errores)
+
+Validar que Google indexe correctamente:
+→ https://search.google.com/search-console
+  (ir a "Inspeccionar URL" y solicitar indexación)
+
+
+===============================================================
+PASO 7 — Verificar que los LLMs encuentran y conocen el sitio
+===============================================================
+
+Una vez que el sitio lleve al menos 1-2 semanas publicado,
+hacer estas pruebas directamente en cada IA:
+
+--------------------------------------------------------------
+A) PRUEBA EN CHATGPT (chat.openai.com)
+--------------------------------------------------------------
+Escribir estas preguntas y verificar que responde con datos correctos:
+
+  "¿Qué es [Nombre del negocio]?"
+  "¿Dónde está ubicado [Nombre del negocio]?"
+  "¿Cuáles son los servicios de [Nombre del negocio]?"
+  "¿Cómo contacto a [Nombre del negocio]?"
+  "[Nombre del negocio] [ciudad] ¿qué hace?"
+
+Señales de que SÍ lo encontró:
+  ✓ Menciona la ubicación correcta
+  ✓ Lista los servicios con nombres exactos
+  ✓ Muestra el teléfono o WhatsApp real
+  ✓ Describe el negocio con palabras similares al llms.txt
+
+Señales de que NO lo encontró todavía:
+  ✗ Dice "no tengo información sobre esa empresa"
+  ✗ Inventa datos o confunde con otro negocio
+  ✗ Da información genérica sin detalles reales
+
+--------------------------------------------------------------
+B) PRUEBA EN PERPLEXITY (perplexity.ai)
+--------------------------------------------------------------
+Perplexity busca en internet en tiempo real, es el más rápido
+en indexar sitios nuevos (puede tardar solo días).
+
+Escribir:
+  "[Nombre del negocio] [ciudad]"
+  "hormigón premezclado [ciudad] Chile" (reemplazar por el rubro)
+
+Verificar:
+  ✓ Aparece el sitio en las fuentes citadas (panel derecho)
+  ✓ La respuesta menciona datos del sitio (teléfono, servicios)
+  ✓ Hay un enlace directo al dominio
+
+--------------------------------------------------------------
+C) PRUEBA EN CLAUDE (claude.ai)
+--------------------------------------------------------------
+  "Busca información sobre [Nombre del negocio] en [ciudad]"
+  "¿Qué servicios ofrece [Nombre del negocio]?"
+
+Nota: Claude accede a internet en algunos modos. Si no encuentra
+el sitio, no es inmediato — puede tardar semanas en aparecer.
+
+--------------------------------------------------------------
+D) PRUEBA EN GOOGLE CON BÚSQUEDA DE MARCA
+--------------------------------------------------------------
+En Google escribir:
+  site:TUDOMINIO.cl        → debe mostrar páginas indexadas
+  "[Nombre del negocio]"   → debe aparecer en primeros resultados
+  "[rubro] [ciudad] Chile" → idealmente aparece en página 1
+
+Si no aparece en Google tras 2 semanas:
+→ Ir a Google Search Console → "Inspeccionar URL" → "Solicitar indexación"
+
+--------------------------------------------------------------
+E) PRUEBA DE llms.txt ACCESIBLE
+--------------------------------------------------------------
+Algunos LLMs leen directamente el llms.txt. Verificar que
+responde correctamente en el navegador:
+
+  curl https://TUDOMINIO.cl/llms.txt
+
+O simplemente abrir la URL en el navegador y confirmar que
+muestra el contenido del archivo en texto plano.
+
+--------------------------------------------------------------
+TIEMPOS DE ESPERA ESPERADOS
+--------------------------------------------------------------
+
+  Google / Bing:    1 a 4 semanas para indexar
+  Perplexity:       días a 2 semanas
+  ChatGPT:          semanas a meses (depende del ciclo de entrenamiento)
+  Claude:           semanas a meses
+  Gemini (Google):  1 a 4 semanas (usa el índice de Google)
+
+IMPORTANTE: Si tras 4 semanas Google no lo indexa:
+1. Entrar a Google Search Console
+2. Ir a "Cobertura" y revisar errores
+3. Ir a "Sitemaps" y enviar https://TUDOMINIO.cl/sitemap.xml
+4. Usar "Inspeccionar URL" en la página principal y hacer clic
+   en "Solicitar indexación"
+
+--------------------------------------------------------------
+TABLA DE VERIFICACIÓN COMPLETA (guardar con fecha)
+--------------------------------------------------------------
+
+Fecha de verificación: ________________
+
+[ ] robots.txt accesible en navegador
+[ ] llms.txt accesible en navegador
+[ ] sitemap.xml accesible en navegador
+[ ] Schema JSON-LD sin errores (rich-results test)
+[ ] Google Search Console: URL inspeccionada y sin errores
+[ ] Sitemap enviado en Google Search Console
+[ ] Prueba en Perplexity: encontró el sitio
+[ ] Prueba en ChatGPT: encontró el sitio
+[ ] Prueba en Claude: encontró el sitio
+[ ] Aparece en Google con búsqueda de marca
+
+
+===============================================================
+HERRAMIENTAS ÚTILES
+===============================================================
+
+- Rich Results Test (Google):  https://search.google.com/test/rich-results
+- Schema Markup Validator:     https://validator.schema.org
+- Google Search Console:       https://search.google.com/search-console
+- Bing Webmaster Tools:        https://www.bing.com/webmasters
+- llms.txt estándar:           https://llmstxt.org
+
+
+===============================================================
+RESUMEN — ARCHIVOS A CREAR/MODIFICAR
+===============================================================
+
+CREAR (nuevos):
+  llms.txt          → en la raíz del sitio
+
+MODIFICAR:
+  robots.txt        → agregar agentes de IA que falten
+  index.html        → mejorar JSON-LD + agregar meta tags IA
+  sitemap.xml       → actualizar fechas + agregar llms.txt
+
+TIEMPO ESTIMADO: 20-30 minutos por sitio.
+FRECUENCIA: Repetir pasos 2, 3 y 5 cada vez que cambien
+            los servicios, precios o datos de contacto.
+
+
+===============================================================
+  Documento creado: 2026-05-29
+  Proyecto de referencia: Hormigones G&P (hormigonesgyp.cl)
+===============================================================
