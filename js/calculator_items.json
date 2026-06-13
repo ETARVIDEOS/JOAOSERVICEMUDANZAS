@@ -1,13 +1,13 @@
-{
+﻿{
   "Living": [
     {
-      "name": "sofÃ¡ / divÃ¡n 3 cuerpos/ futton living",
-      "label": "SofÃ¡ / DivÃ¡n 3 Cuerpos/ Futton",
+      "name": "sofá / diván 3 cuerpos/ futton living",
+      "label": "Sofá / Diván 3 Cuerpos/ Futton",
       "factor": 1.4
     },
     {
-      "name": "sofÃ¡ 2 cuerpos living",
-      "label": "SofÃ¡ 2 Cuerpos",
+      "name": "sofá 2 cuerpos living",
+      "label": "Sofá 2 Cuerpos",
       "factor": 1.0
     },
     {
@@ -71,13 +71,13 @@
       "factor": 0.15
     },
     {
-      "name": "lÃ¡mparas de pie / grande living",
-      "label": "LÃ¡mparas de Pie / Grande",
+      "name": "lámparas de pie / grande living",
+      "label": "Lámparas de Pie / Grande",
       "factor": 0.3
     },
     {
-      "name": "lÃ¡mparas chicas living",
-      "label": "LÃ¡mparas Chicas",
+      "name": "lámparas chicas living",
+      "label": "Lámparas Chicas",
       "factor": 0.1
     },
     {
@@ -96,8 +96,8 @@
       "factor": 1.7
     },
     {
-      "name": "adornos frÃ¡giles living",
-      "label": "Adornos frÃ¡giles",
+      "name": "adornos frágiles living",
+      "label": "Adornos frágiles",
       "factor": 0.1
     },
     {
@@ -153,8 +153,8 @@
       "factor": 0.3
     },
     {
-      "name": "carro de tÃ© comedor",
-      "label": "Carro de TÃ©",
+      "name": "carro de té comedor",
+      "label": "Carro de Té",
       "factor": 0.4
     },
     {
@@ -168,8 +168,8 @@
       "factor": 0.1
     },
     {
-      "name": "adornos frÃ¡giles comedor",
-      "label": "Adornos frÃ¡giles",
+      "name": "adornos frágiles comedor",
+      "label": "Adornos frágiles",
       "factor": 0.1
     },
     {
@@ -178,129 +178,129 @@
       "factor": 1.5
     }
   ],
-  "Dormitorio N° 1": [
+  "Dormitorio N� 1": [
     {
-      "name": "cama 2 plazas king dormitorio nÂ° 1",
+      "name": "cama 2 plazas king dormitorio n° 1",
       "label": "Cama 2 Plazas King",
       "factor": 3.0
     },
     {
-      "name": "cama 2 plazas dormitorio nÂ° 1",
+      "name": "cama 2 plazas dormitorio n° 1",
       "label": "Cama 2 Plazas",
       "factor": 2.0
     },
     {
-      "name": "cama 1 1/2 plaza dormitorio nÂ° 1",
+      "name": "cama 1 1/2 plaza dormitorio n° 1",
       "label": "Cama 1 1/2 Plaza",
       "factor": 1.5
     },
     {
-      "name": "cÃ³moda dormitorio nÂ° 1",
-      "label": "CÃ³moda",
+      "name": "cómoda dormitorio n° 1",
+      "label": "Cómoda",
       "factor": 0.8
     },
     {
-      "name": "caja fuerte dormitorio nÂ° 1",
+      "name": "caja fuerte dormitorio n° 1",
       "label": "Caja fuerte",
       "factor": 1.7
     },
     {
-      "name": "ropero dormitorio nÂ° 1",
+      "name": "ropero dormitorio n° 1",
       "label": "Ropero",
       "factor": 1.0
     },
     {
-      "name": "estante dormitorio nÂ° 1",
+      "name": "estante dormitorio n° 1",
       "label": "Estante",
       "factor": 0.6
     },
     {
-      "name": "veladores dormitorio nÂ° 1",
+      "name": "veladores dormitorio n° 1",
       "label": "Veladores",
       "factor": 0.15
     },
     {
-      "name": "alfombras chicas dormitorio nÂ° 1",
+      "name": "alfombras chicas dormitorio n° 1",
       "label": "Alfombras Chicas",
       "factor": 0.1
     },
     {
-      "name": "ropa de cama y baÃ±o x cajas dormitorio nÂ° 1",
-      "label": "Ropa de cama y baÃ±o x cajas",
+      "name": "ropa de cama y baño x cajas dormitorio n° 1",
+      "label": "Ropa de cama y baño x cajas",
       "factor": 0.3
     },
     {
-      "name": "baÃºles grandes dormitorio nÂ° 1",
-      "label": "BaÃºles grandes",
+      "name": "baúles grandes dormitorio n° 1",
+      "label": "Baúles grandes",
       "factor": 0.45
     },
     {
-      "name": "baÃºles chicos dormitorio nÂ° 1",
-      "label": "BaÃºles chicos",
+      "name": "baúles chicos dormitorio n° 1",
+      "label": "Baúles chicos",
       "factor": 0.25
     }
   ],
-  "Dormitorio N° 2": [
+  "Dormitorio N� 2": [
     {
-      "name": "cama 1 plaza dormitorio nÂº 2",
+      "name": "cama 1 plaza dormitorio nº 2",
       "label": "Cama 1 Plaza",
       "factor": 0.9
     },
     {
-      "name": "comoda / mudador dormitorio nÂº 2",
+      "name": "comoda / mudador dormitorio nº 2",
       "label": "Comoda / Mudador",
       "factor": 0.8
     },
     {
-      "name": "veladores dormitorio nÂº 2",
+      "name": "veladores dormitorio nº 2",
       "label": "Veladores",
       "factor": 0.15
     },
     {
-      "name": "cuna / corral dormitorio nÂº 2",
+      "name": "cuna / corral dormitorio nº 2",
       "label": "Cuna / Corral",
       "factor": 0.5
     },
     {
-      "name": "juguetes x cajas dormitorio nÂº 2",
+      "name": "juguetes x cajas dormitorio nº 2",
       "label": "Juguetes x Cajas",
       "factor": 0.2
     },
     {
-      "name": "mesita niÃ±os dormitorio nÂº 2",
-      "label": "Mesita niÃ±os",
+      "name": "mesita niños dormitorio nº 2",
+      "label": "Mesita niños",
       "factor": 0.3
     }
   ],
-  "Dormitorio N° 3": [
+  "Dormitorio N� 3": [
     {
-      "name": "cama 1 plaza dormitorio nÂº 3",
+      "name": "cama 1 plaza dormitorio nº 3",
       "label": "Cama 1 Plaza",
       "factor": 0.9
     },
     {
-      "name": "comoda / mudador dormitorio nÂº 3",
+      "name": "comoda / mudador dormitorio nº 3",
       "label": "Comoda / Mudador",
       "factor": 0.8
     },
     {
-      "name": "veladores dormitorio nÂº 3",
+      "name": "veladores dormitorio nº 3",
       "label": "Veladores",
       "factor": 0.15
     },
     {
-      "name": "cuna / corral dormitorio nÂº 3",
+      "name": "cuna / corral dormitorio nº 3",
       "label": "Cuna / Corral",
       "factor": 0.5
     },
     {
-      "name": "juguetes x cajas dormitorio nÂº 3",
+      "name": "juguetes x cajas dormitorio nº 3",
       "label": "Juguetes x Cajas",
       "factor": 0.2
     },
     {
-      "name": "baÃºles chicos dormitorio nÂº 3",
-      "label": "BaÃºles chicos",
+      "name": "baúles chicos dormitorio nº 3",
+      "label": "Baúles chicos",
       "factor": 0.25
     }
   ],
@@ -346,8 +346,8 @@
       "factor": 0.2
     },
     {
-      "name": "cristalerÃ­a x cajas cocina",
-      "label": "CristalerÃ­a x cajas",
+      "name": "cristalería x cajas cocina",
+      "label": "Cristalería x cajas",
       "factor": 0.2
     },
     {
@@ -443,8 +443,8 @@
       "factor": 0.6
     },
     {
-      "name": "mÃ¡q.coser portÃ¡til varios",
-      "label": "MÃ¡q.Coser PortÃ¡til",
+      "name": "máq.coser portátil varios",
+      "label": "Máq.Coser Portátil",
       "factor": 0.1
     },
     {
