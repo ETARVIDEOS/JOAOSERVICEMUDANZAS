@@ -1,10 +1,10 @@
-# Joao Service Mudanzas
+﻿# Jao Service Mudanzas
 
 > Empresa premium de mudanzas en Santiago, Chile, especializada en traslados residenciales y corporativos con altos estándares de seguridad y confianza.
 
 ## Descripción
 
-Joao Service Mudanzas es una empresa líder en el rubro de mudanzas en la Región Metropolitana. Nos destacamos por ofrecer un servicio catalogado como "Mudanzas de Lujo", enfocado en la puntualidad, el cuidado extremo de los bienes de nuestros clientes, y un servicio al cliente excepcional. Contamos con una flota de camiones cerrados y abiertos de la marca Karry, perfectamente equipados para garantizar un traslado seguro y rápido.
+Jao Service Mudanzas es una empresa líder en el rubro de mudanzas en la Región Metropolitana. Nos destacamos por ofrecer un servicio catalogado como "Mudanzas de Lujo", enfocado en la puntualidad, el cuidado extremo de los bienes de nuestros clientes, y un servicio al cliente excepcional. Contamos con una flota de camiones cerrados y abiertos de la marca Karry, perfectamente equipados para garantizar un traslado seguro y rápido.
 
 Nuestra misión es hacer que el proceso de mudanza, tradicionalmente estresante, sea una experiencia fluida, segura y transparente, gracias a nuestros equipos profesionales y nuestras opciones de embalaje premium.
 
@@ -28,7 +28,7 @@ Nuestra misión es hacer que el proceso de mudanza, tradicionalmente estresante,
 
 ## Sitio web
 
-- https://joaoservicemudanzas.cl
-- https://joaoservicemudanzas.cl/#servicios
-- https://joaoservicemudanzas.cl/#calculadora
-- https://joaoservicemudanzas.cl/#flota
+- https://jaoservicemudanzas.cl
+- https://jaoservicemudanzas.cl/#servicios
+- https://jaoservicemudanzas.cl/#calculadora
+- https://jaoservicemudanzas.cl/#flota

@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 # Buscadores tradicionales
@@ -42,4 +42,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://joaoservicemudanzas.cl/sitemap.xml
+Sitemap: https://jaoservicemudanzas.cl/sitemap.xml

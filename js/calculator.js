@@ -1,4 +1,4 @@
-// calculator.js - Joao Service Mudanzas
+﻿// calculator.js - Jao Service Mudanzas
 
 let calculatorData = {}; // Carga desde JSON
 let clientInventory = {}; // Guarda { "item_name": { qty: X, factor: Y, category: Z, label: W } }
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Crear mensaje de WhatsApp
-      let waText = `*Cotización Joao Service Mudanzas* 🚛\n\n`;
+      let waText = `*Cotización Jao Service Mudanzas* 🚛\n\n`;
       waText += `*📐 VOLUMEN CALCULADO:* ${totalM3.toFixed(2).replace('.', ',')} m³\n\n`;
       waText += `*📦 INVENTARIO COMPLETO:*\n${inventoryDetailsText}\n`;
       waText += `*📍 RUTA Y ACCESOS:*\n`;
