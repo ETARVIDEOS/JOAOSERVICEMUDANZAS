@@ -42,4 +42,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://jaoservicemudanzas.cl/sitemap.xml
+Sitemap: https://mudanzasjaoservices.cl/sitemap.xml

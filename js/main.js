@@ -1,4 +1,4 @@
-﻿// main.js - Jao Service Mudanzas
+﻿// main.js - Mudanzas Jao Services
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const date = document.getElementById('c-date').value;
       const message = document.getElementById('c-message').value;
 
-      let waText = `*Consulta Jao Service Mudanzas* 🚛\n\n`;
+      let waText = `*Consulta Mudanzas Jao Services* 🚛\n\n`;
       waText += `*👤 Nombre:* ${name}\n`;
       waText += `*📞 Teléfono:* ${phone}\n`;
       waText += `*📦 Servicio:* ${service}\n`;
