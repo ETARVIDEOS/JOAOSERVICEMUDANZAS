@@ -1,4 +1,4 @@
-﻿// calculator.js - Mudanzas Jao Services
+// calculator.js - Mudanzas Jao Services
 
 let calculatorData = {}; // Carga desde JSON
 let clientInventory = {}; // Guarda { "item_name": { qty: X, factor: Y, category: Z, label: W } }
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 1. CARGAR INVENTARIO DESDE JSON Y RENDERIZAR ESTRUCTURA
   // ==========================================================================
-  fetch('js/calculator_items.json')
+  fetch('js/calculator_items.json?v=' + new Date().getTime())
     .then(response => {
       if (!response.ok) {
         throw new Error("No se pudo cargar el archivo JSON de ítems.");
