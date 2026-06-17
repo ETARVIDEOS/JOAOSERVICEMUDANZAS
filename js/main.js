@@ -1,4 +1,4 @@
-﻿// main.js - Mudanzas Jao Services
+// main.js - Mudanzas Jao Services
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -63,9 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (typingElement) {
     const phrases = [
-      "Empresa de Mudanzas en Santiago",
+      "Empresa de Mudanzas en Santiago y Regiones",
       "Tu Mudanza en Manos de Expertos",
-      "Servicio Profesional y Confiable"
+      "Servicio Profesional y Confiable",
+      "Mudanzas Residenciales, Oficinas, Empresas"
     ];
     let phraseIndex = 0;
     let charIndex = 0;

@@ -142,6 +142,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const fitElevator = document.getElementById('cr-fit-elevator').value;
       const fitQty = document.getElementById('cr-fit-qty').value || '0';
       
+      let serviceType = '';
+      const selectedService = document.querySelector('input[name="cr-service-type"]:checked');
+      if (selectedService) {
+        serviceType = selectedService.value;
+      }
+      
+      if (!serviceType) {
+        alert("Por favor, seleccione el Tipo de Servicio en la sección: 'Seleccione el tipo de servicio'.");
+        return;
+      }
+      
       const comments = document.getElementById('cr-comments').value.trim() || 'Ninguno';
 
       // Agrupar items seleccionados por categoría
@@ -169,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       waText += `- ¿Piso / Departamento?: ${floor}\n`;
       waText += `- Acceso por: ${access}\n`;
       waText += `- ¿Muebles que no caben en el ascensor?: ${fitElevator}${fitElevator === 'Sí' ? ` (${fitQty} mueble(s))` : ''}\n`;
+      waText += `- Tipo de servicio: ${serviceType}\n`;
       waText += `- Detalles de acceso: ${comments}\n\n`;
       waText += `*👤 CLIENTE:*\n`;
       waText += `- Nombre: ${name}\n`;
@@ -255,4 +267,13 @@ function calculateTotalM3() {
     total += itemObj.qty * itemObj.factor;
   });
   return total;
+}
+
+function selectOnlyOneService(checkbox) {
+  const checkboxes = document.getElementsByName('cr-service-type');
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) {
+      item.checked = false;
+    }
+  });
 }

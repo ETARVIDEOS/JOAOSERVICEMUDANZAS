@@ -251,9 +251,12 @@ h2::after {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+#main-header.scrolled .logo-img {
+  height: 65px;
+}
+
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -262,42 +265,55 @@ h2::after {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-right: 25px;
+  flex-shrink: 0;
 }
 
 .logo-img {
-  height: 50px;
+  height: 75px;
   width: auto;
   border-radius: var(--border-radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-top {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
 }
 
 .logo-main {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   letter-spacing: 0.05em;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
-.logo-sub {
-  font-family: var(--font-heading);
-  font-size: 0.65rem;
+.logo-main span {
   color: var(--brand-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 600;
-  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 20px;
+  margin-right: auto;
+}
+
+.nav-cta {
+  flex-shrink: 0;
 }
 
 .nav-links a {
@@ -412,10 +428,10 @@ h2::after {
 
 .hero h1 {
   font-size: 3.8rem;
-  line-height: 1.1;
+  line-height: 1.3;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
-  min-height: 120px;
+  min-height: 150px;
 }
 
 .typing-cursor::after {
@@ -439,6 +455,29 @@ h2::after {
 .hero-btns {
   display: flex;
   gap: 1.5rem;
+  justify-content: center;
+}
+
+.hero-btns .btn-primary {
+  animation: alarm-shake 1.3s infinite ease-in-out;
+}
+
+@keyframes alarm-shake {
+  0%, 100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+  10%, 30%, 50% {
+    transform: scale(1.05) translateY(-5px) rotate(-3deg);
+  }
+  20%, 40%, 60% {
+    transform: scale(1.05) translateY(-5px) rotate(3deg);
+  }
+  70% {
+    transform: scale(1.05) translateY(-8px) rotate(0deg);
+  }
+  85% {
+    transform: scale(1.02) translateY(2px) rotate(0deg);
+  }
 }
 
 /* ==========================================================================
@@ -447,8 +486,8 @@ h2::after {
 .stats-section {
   position: relative;
   z-index: 5;
-  margin-top: -80px;
-  padding-bottom: 5rem;
+  margin-top: 0;
+  padding: 4rem 0 5rem 0;
 }
 
 .stats-grid {
@@ -1654,7 +1693,7 @@ footer {
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   /* Header Movil */
   #main-header {
     height: 70px;
@@ -1665,6 +1704,18 @@ footer {
   
   .mobile-menu-btn {
     display: flex;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+  
+  .logo-img {
+    height: 60px;
+  }
+  
+  #main-header.scrolled .logo-img {
+    height: 55px;
   }
   
   .nav-links {
@@ -1691,18 +1742,22 @@ footer {
   }
 }
 
-@media (min-width: 1151px) and (max-width: 1250px) {
-  .nav-links {
-    gap: 15px;
+@media (min-width: 1201px) and (max-width: 1366px) {
+  .logo {
+    gap: 8px;
+    margin-right: 20px;
+  }
+  .logo-img {
+    height: 60px;
+  }
+  #main-header.scrolled .logo-img {
+    height: 50px;
   }
   .logo-main {
     font-size: 1.15rem;
   }
-  .logo-img {
-    height: 45px;
-  }
-  #main-header.scrolled .logo-img {
-    height: 40px;
+  .nav-links {
+    gap: 14px;
   }
 }
 
@@ -1715,13 +1770,44 @@ footer {
     padding: 10px 22px;
   }
   
-  /* Hero */
+  /* Logo responsive */
+  .logo-top {
+    font-size: 0.65rem;
+  }
+  .logo-main {
+    font-size: 1.15rem;
+  }
+  
+  /* Hero centered on mobile */
+  .hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-desc {
+    margin: 0 auto 2rem auto;
+  }
+  
+  /* Hero h1 */
   .hero h1 {
     font-size: 2.3rem;
     min-height: 90px;
+    line-height: 1.2;
   }
-  .hero-desc {
-    font-size: 0.95rem;
+  
+  /* WhatsApp float smaller on mobile */
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-img {
+    width: 28px;
+    height: 28px;
   }
   
   /* Stats */
@@ -1822,5 +1908,114 @@ footer {
   .cr-cm-line-total {
     text-align: left;
     margin-top: 4px;
+  }
+}
+
+/* ==========================================================================
+   TIPO DE SERVICIO CHECKBOX SELECTION
+   ========================================================================== */
+.cr-cm-service-select-section {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cr-cm-service-select-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  color: var(--brand-gold);
+  margin-bottom: 8px;
+}
+
+.service-select-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.cr-cm-services-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.service-checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  user-select: none;
+}
+
+.service-checkbox-card:hover {
+  border-color: var(--brand-gold);
+  background-color: var(--brand-gold-soft);
+}
+
+.service-checkbox-card input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--brand-gold);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.service-checkbox-card input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: var(--brand-gold);
+  border-color: var(--brand-gold);
+}
+
+.service-checkbox-card input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.service-checkbox-card:has(input[type="checkbox"]:checked) {
+  border-color: var(--brand-gold);
+  background-color: rgba(212, 175, 55, 0.08);
+}
+
+.service-label-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brand-gold);
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .cr-cm-services-checkboxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .cr-cm-services-checkboxes {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .cr-cm-service-select-section {
+    padding: 16px;
   }
 }

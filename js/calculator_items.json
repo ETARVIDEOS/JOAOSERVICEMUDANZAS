@@ -1,4 +1,4 @@
-﻿{
+{
   "Living": [
     {
       "name": "sofá / diván 3 cuerpos/ futton living",
@@ -28,7 +28,7 @@
     {
       "name": "vitrina living",
       "label": "Vitrina",
-      "factor": 0.8
+      "factor": 2.0
     },
     {
       "name": "mesa de centro living",
@@ -48,7 +48,7 @@
     {
       "name": "piano vertical living",
       "label": "Piano Vertical",
-      "factor": 1.7
+      "factor": 2.0
     },
     {
       "name": "piano de cola living",
@@ -119,6 +119,21 @@
       "name": "sillon  pc living",
       "label": "Sillon  PC",
       "factor": 0.3
+    },
+    {
+      "name": "macetero grande living",
+      "label": "Macetero Grande",
+      "factor": 0.4
+    },
+    {
+      "name": "macetero chico living",
+      "label": "Macetero chico",
+      "factor": 0.2
+    },
+    {
+      "name": "sofá tipo l living",
+      "label": "Sofá tipo L",
+      "factor": 2.0
     }
   ],
   "Comedor": [
